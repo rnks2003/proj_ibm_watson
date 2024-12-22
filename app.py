@@ -37,7 +37,7 @@ def preprocess_data():
 def analyze_data():
     try:
         # Analyze sentiment and emotions
-        analyze_reddit_comments('data/cleaned/reddit_comments.csv', 'data/cleaned/analyzed_reddit_comments.csv')
+        analyze_reddit_comments('data/raw/reddit_data.csv', 'data/cleaned/analyzed_reddit_comments.csv')
         analyzed_data = pd.read_csv('data/cleaned/analyzed_reddit_comments.csv')
         return render_template('results.html', data=analyzed_data.to_dict(orient='records'))
     except Exception as e:
