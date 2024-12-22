@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+</head>
+<body>
+    <h1>Sentiment and Emotion Analysis Results</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Comment</th>
+                <th>Sentiment</th>
+                <th>Joy</th>
+                <th>Sadness</th>
+                <th>Fear</th>
+                <th>Disgust</th>
+                <th>Anger</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row['comment'] }}</td>
+                    <td>{{ row['sentiment'] }}</td>
+                    <td>{{ row['joy'] }}</td>
+                    <td>{{ row['sadness'] }}</td>
+                    <td>{{ row['fear'] }}</td>
+                    <td>{{ row['disgust'] }}</td>
+                    <td>{{ row['anger'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
